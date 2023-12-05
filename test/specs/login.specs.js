@@ -9,6 +9,7 @@ describe('Demo Test', () => {
 
          await LoginPage.login('tomsmith','SuperSecretPassword!')
          await LoginPage.checkMessage('You logged into a secure area!')
+         //await  browser.pause(50000)
 
         // await $('#username').setValue('tomsmith')
         // await $('#password').setValue('SuperSecretPassword!')
