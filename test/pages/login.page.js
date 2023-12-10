@@ -1,3 +1,4 @@
+const expectChai = require('chai').expect
 class LoginPage {
 
     get userNameTextbox() {
@@ -10,20 +11,33 @@ class LoginPage {
         return $('button[type="submit"]')
     }
     get loginMessage() {
-        return $('#flash')    }
+        return $('#flash')
+    }
 
-       async login(username,password){
+    get secureMessage() {
 
-            await this.userNameTextbox.setValue(username)
-            await this.passwrodTestbox.setValue(password)
-            
-            await this.loginButton.click()
-        }
+        return $('//h2[normalize-space()="Secure Area"]')
+    }
 
-        async checkMessage(msg){
+    async login(username, password) {
 
-            await expect(this.loginMessage).toHaveTextContaining(msg)
-        }
+        await this.userNameTextbox.setValue(username)
+        await this.passwrodTestbox.setValue(password)
+
+        await this.loginButton.click()
+    }
+
+    async checkMessage(msg) {
+       
+        
+       await expect(this.loginMessage).toBeDisplayed(msg)
+
+    }
+    async secureMsg() {
+      
+        await expect(this.secureMessage).toBeDisplayed()
+
+    }
 }
 
-module.exports=new LoginPage()
+module.exports = new LoginPage()
