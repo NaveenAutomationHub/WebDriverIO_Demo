@@ -9,7 +9,7 @@ describe('Demo Test', () => {
 
          await LoginPage.login('tomsmith','SuperSecretPassword!')
          await LoginPage.checkMessage('You logged into a secure area!')
-
+         await browser.pause(5000)
           //await LoginPage.secureMsg()                
       
          // await  browser.pause(5000)
@@ -20,4 +20,5 @@ describe('Demo Test', () => {
         // await expect($('#flash')).toHaveTextContaining('You logged into a secure area!')
         
     })
+    
 })
