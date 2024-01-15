@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "Unable to locate element: #APjFqb",
-  "stacktrace": "WebDriverError@chrome://marionette/content/error.js:178:5\nNoSuchElementError@chrome://marionette/content/error.js:388:5\nelement.find/</<@chrome://marionette/content/element.js:341:16\n"
-}

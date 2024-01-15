@@ -1,7 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Jan 15 10:54:52 IST 2024","Mon Jan 15 10:54:55 IST 2024","2730","","Demo Test","","","","Login Test",""
-"unknown","Mon Jan 15 11:06:35 IST 2024","Mon Jan 15 11:06:40 IST 2024","5252","","Sample test","","","","My first test",""
-"passed","Mon Jan 15 11:06:00 IST 2024","Mon Jan 15 11:06:09 IST 2024","8801","","Recording 11/21/2023 at 9:35:26 AM","","","","tests Recording 11/21/2023 at 9:35:26 AM",""
-"passed","Mon Jan 15 11:06:24 IST 2024","Mon Jan 15 11:06:26 IST 2024","1650","","Demo Test","","","","Login Test",""
-"passed","Mon Jan 15 10:54:11 IST 2024","Mon Jan 15 10:54:21 IST 2024","9296","","Recording 11/21/2023 at 9:35:26 AM","","","","tests Recording 11/21/2023 at 9:35:26 AM",""
-"failed","Mon Jan 15 10:55:13 IST 2024","Mon Jan 15 10:55:27 IST 2024","14103","","Sample test","","","","My first test",""

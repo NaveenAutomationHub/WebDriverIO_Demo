@@ -1,6 +1,0 @@
-{
-  "x": null,
-  "y": null,
-  "width": 706,
-  "height": 641
-}
