@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"unknown","Mon Jan 15 18:47:18 IST 2024","Mon Jan 15 18:47:25 IST 2024","7000","","demo test","","","","My first test",""
-"passed","Mon Jan 15 18:47:43 IST 2024","Mon Jan 15 18:47:45 IST 2024","1849","","Internet Login","","","","Login Test",""
-"passed","Mon Jan 15 18:47:18 IST 2024","Mon Jan 15 18:47:29 IST 2024","10480","","Recorded Test","","","","tests Recording ",""
