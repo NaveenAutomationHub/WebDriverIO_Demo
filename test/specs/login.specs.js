@@ -3,10 +3,8 @@ const LoginPage =require('../pageObjects/login.page')
 const HomePage =require('../pageObjects/home.page')
 const fs =require('fs')
 let credentials =JSON.parse(fs.readFileSync('test/testData/LoginTest.json'))
-  
 
-
-describe('Demo Test', async() => {
+describe('Internet Login', async() => {
 
     credentials.forEach( ({username,password}) => {  
 

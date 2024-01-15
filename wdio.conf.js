@@ -53,13 +53,13 @@ exports.config = {
     capabilities: [
         {
 
-        maxInstances: 1,
+        maxInstances: 2,
         browserName: 'chrome'
     },
    
     // {
 
-    //     maxInstances: 1,
+    //     maxInstances: 2,
     //     browserName: 'firefox'
     // }
 ],
@@ -136,15 +136,15 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',
-    // ['allure', { outputDir: 'allure-results'}]
+   // ['allure', { outputDir: 'allure-results'}]
 
-    ['junit', {
-        outputDir: 'junit-reports',
-        outputFileFormat: function(options) { // optional
-           // return `results-${new Date().getTime()}.xml`
-            return `results-${options.cid}.xml`
-        }
-    }]
+    // ['junit', {
+    //     outputDir: 'junit-reports',
+    //     outputFileFormat: function(options) { // optional
+    //        // return `results-${new Date().getTime()}.xml`
+    //         return `results-${options.cid}.xml`
+    //     }
+    // }]
 ],
 
     // Options to be passed to Mocha.
@@ -155,7 +155,7 @@ exports.config = {
     },
     reporters: [['allure', {
         outputDir: 'allure-results',
-       // disableWebdriverScreenshotsReporting: true,
+       // disableWebdriverScreenshotsReporting: falce,
     }]],
     //
     // =====

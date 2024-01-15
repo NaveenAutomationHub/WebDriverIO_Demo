@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
-    "allureReports": "allure generate allure-results --clean && allure open"
+    "allureReports": "allure generate --clean allure-results && allure open"
   },
   "keywords": [],
   "author": "",

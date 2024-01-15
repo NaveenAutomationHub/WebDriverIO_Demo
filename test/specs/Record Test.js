@@ -1,5 +1,5 @@
-describe("Recording 11/21/2023 at 9:35:26 AM", () => {
-  it("tests Recording 11/21/2023 at 9:35:26 AM", async () => {
+describe("Recorded Test", () => {
+  it("tests Recording ", async () => {
     await browser.setWindowSize(706, 641)
     await browser.url("https://the-internet.herokuapp.com/login")
     await expect(browser).toHaveUrl("https://the-internet.herokuapp.com/login")
