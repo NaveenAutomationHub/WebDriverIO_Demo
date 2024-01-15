@@ -1,24 +1,32 @@
 
-const LoginPage =require('../pages/login.page')
+const LoginPage =require('../pageObjects/login.page')
+const HomePage =require('../pageObjects/home.page')
+const fs =require('fs')
+let credentials =JSON.parse(fs.readFileSync('test/testData/LoginTest.json'))
+  
 
-describe('Demo Test', () => {
 
-    it('Login Test', async () => {
+describe('Demo Test', async() => {
 
-         browser.url('https://the-internet.herokuapp.com/login')
+    credentials.forEach( ({username,password}) => {  
 
-         await LoginPage.login('tomsmith','SuperSecretPassword!')
-         await LoginPage.checkMessage('You logged into a secure area!')
-         await browser.pause(5000)
-          //await LoginPage.secureMsg()                
-      
-         // await  browser.pause(5000)
-        // await $('#username').setValue('tomsmith')
-        // await $('#password').setValue('SuperSecretPassword!')
-        // await $('button[type="submit"]').click()
+    it('Login Test', async() => 
+    
+    {        
+         await browser.url("/login")
+        
+        // await LoginPage.login(credentials['user 1'].email,credentials['user 1'].password)
 
-        // await expect($('#flash')).toHaveTextContaining('You logged into a secure area!')
+         await LoginPage.login(username,password)
+         await HomePage.checkMessage('You logged into a secure area!')
+
+         await HomePage.secureMsg()
+
+         //browser.pause(50000)        
         
     })
+
+})
     
 })
+

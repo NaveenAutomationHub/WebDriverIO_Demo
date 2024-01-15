@@ -26,7 +26,7 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+         //'./test/specs/**/test1.specs.js'
     ],
     //
     // ============
@@ -50,9 +50,19 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
+    capabilities: [
+        {
+
+        maxInstances: 1,
         browserName: 'chrome'
-    }],
+    },
+   
+    // {
+
+    //     maxInstances: 1,
+    //     browserName: 'firefox'
+    // }
+],
 
     //
     // ===================
@@ -61,7 +71,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:
@@ -79,13 +89,14 @@ exports.config = {
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
-    bail: 0,
+    bail: 10,
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://the-internet.herokuapp.com',
+    //baseUrl: 'https://rahulshettyacademy.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -101,7 +112,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+    // services: ['chromedriver'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -126,6 +137,7 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',
     // ['allure', { outputDir: 'allure-results'}]
+
     ['junit', {
         outputDir: 'junit-reports',
         outputFileFormat: function(options) { // optional
@@ -141,7 +153,10 @@ exports.config = {
         ui: 'bdd',
         timeout: 60000
     },
-
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+       // disableWebdriverScreenshotsReporting: true,
+    }]],
     //
     // =====
     // Hooks
@@ -236,8 +251,12 @@ exports.config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+     afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+
+        if (error) {
+            await browser.takeScreenshot();
+        }
+     },
 
 
     /**
