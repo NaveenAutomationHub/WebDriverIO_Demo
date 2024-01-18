@@ -26,7 +26,7 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-         //'./test/specs/**/test1.specs.js'
+         //'./test/specs/**/Search.js'
     ],
     //
     // ============
@@ -96,7 +96,7 @@ exports.config = {
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
     baseUrl: 'https://the-internet.herokuapp.com',
-    //baseUrl: 'https://rahulshettyacademy.com',
+    
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -155,7 +155,7 @@ exports.config = {
     },
     reporters: [['allure', {
         outputDir: 'allure-results',
-       // disableWebdriverScreenshotsReporting: falce,
+        disableWebdriverScreenshotsReporting: false,
     }]],
     //
     // =====

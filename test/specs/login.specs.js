@@ -11,19 +11,14 @@ describe('Internet Login', async() => {
     it('Login Test', async() => 
     
     {        
-         await browser.url("/login")
-        
-        // await LoginPage.login(credentials['user 1'].email,credentials['user 1'].password)
-
+         await browser.url("/login")  
          await LoginPage.login(username,password)
          await HomePage.checkMessage('You logged into a secure area!')
-
          await HomePage.secureMsg()
 
-         //browser.pause(50000)        
-        
     })
-
+    
+   
 })
     
 })

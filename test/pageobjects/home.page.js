@@ -1,3 +1,5 @@
+const { assert } = require('chai')
+
 const expectChai = require('chai').expect
 class HomePage {
 
@@ -21,6 +23,7 @@ class HomePage {
       
         console.log(await (await this.secureMessage).getText()) 
         await expect(this.secureMessage).toBeDisplayed()
+
 
     }
 }
