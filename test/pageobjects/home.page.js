@@ -16,7 +16,7 @@ class HomePage {
     async checkMessage(msg) {
        
         console.log(await (await this.loginMessage).getText()) 
-       await expectChai(await (await this.loginMessage).getText()).contain(msg)
+       await expectChai(await (await this.loginMessage).getText()).contain(msg)    
      
     }
     async secureMsg() {

@@ -16,9 +16,7 @@ describe('Internet Login', async() => {
          await HomePage.checkMessage('You logged into a secure area!')
          await HomePage.secureMsg()
 
-    })
-    
-   
+    })   
 })
     
 })
